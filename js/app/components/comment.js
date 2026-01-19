@@ -34,14 +34,14 @@ export const comment = (() => {
     /**
      * @returns {string}
      */
-    const onNullComment = () => {
-        const desc = lang
-            .on('id', '📢 Yuk, share undangan ini biar makin rame komentarnya! 🎉')
-            .on('en', '📢 Let\'s share this invitation to get more comments! 🎉')
-            .get();
+        const onNullComment = () => {
+            const desc = lang
+                .on('id', '📢 Baarakallaahu fiikum!')
+                .on('en', '📢 Baarakallaahu fiikum!')
+                .get();
 
-        return `<div class="text-center p-4 mx-0 mt-0 mb-3 bg-theme-auto rounded-4 shadow"><p class="fw-bold p-0 m-0" style="font-size: 0.95rem;">${desc}</p></div>`;
-    };
+            return `<div class="text-center p-4 mx-0 mt-0 mb-3 bg-theme-auto rounded-4 shadow"><p class="fw-bold p-0 m-0" style="font-size: 0.95rem;">${desc}</p></div>`;
+        };
 
     /**
      * @param {string} id 
@@ -332,10 +332,10 @@ export const comment = (() => {
             return;
         }
 
-        if (!gifIsOpen && form.value?.trim().length === 0) {
-            util.notify('Comments cannot be empty.').warning();
-            return;
-        }
+        // if (!gifIsOpen && form.value?.trim().length === 0) {
+        //     util.notify('Comments cannot be empty.').warning();
+        //     return;
+        // }
 
         if (form) {
             form.disabled = true;
@@ -455,10 +455,10 @@ export const comment = (() => {
         }
 
         const form = document.getElementById(`form-${id ? `inner-${id}` : 'comment'}`);
-        if (!gifIsOpen && form.value?.trim().length === 0) {
-            util.notify('Comments cannot be empty.').warning();
-            return;
-        }
+        // if (!gifIsOpen && form.value?.trim().length === 0) {
+        //     util.notify('Comments cannot be empty.').warning();
+        //     return;
+        // }
 
         if (!id && name && !session.isAdmin()) {
             name.disabled = true;
