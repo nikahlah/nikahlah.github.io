@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="id" data-bs-theme="light">
   <head>
+    <!-- Common Tag -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Undangan Pernikahan</title>
 
-    <!-- theme color sesuai palette -->
-    <meta name="theme-color" content="#2F5D48" />
-
-    <!-- SEO -->
+    <!-- SEO Tag -->
     <meta name="language" content="id" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
     <meta name="title" content="Undangan Pernikahan" />
     <meta name="description" content="Rifat dan Ulfa" />
+    <meta
+      name="keywords"
+      content="undangan, wedding, undangan digital, undangan online, wedding invitation, template undangan, template undangan pernikahan, undangan pernikahan, template undangan online, wedding invitation github, template website, template website undangan pernikahan"
+    />
     <meta property="og:title" content="Undangan Pernikahan" />
     <meta property="og:description" content="Rifat dan Ulfa" />
     <meta property="og:image" content="https://zawaaj.github.io/assets/images/logo.png" />
@@ -21,24 +24,47 @@
     <meta property="og:url" content="https://zawaaj.github.io" />
     <meta property="og:site_name" content="Undangan Pernikahan" />
 
-    <!-- Preconnect & Fonts -->
+    <!-- Appearance -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Undangan Pernikahan" />
+    <!-- theme-color mengikuti palette Pagi Zamrud -->
+    <meta name="theme-color" content="#2F5D48" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="canonical" href="https://zawaaj.github.io/" />
+    <link rel="icon" type="image/png" sizes="192x192" href="https://zawaaj.github.io/assets/images/logo.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="https://zawaaj.github.io/assets/images/logo.png" />
+
+    <!-- Preconnect CDN -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+    <!-- Preload Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" crossorigin="anonymous" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" crossorigin="anonymous" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" as="script" />
+
+    <!-- Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" />
 
-    <!-- Dependencies -->
+    <!-- Dependencies CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" crossorigin="anonymous" />
 
-    <!-- Palette override (external minified file) -->
+    <!-- Palette override (external file - Pagi Zamrud) -->
     <link rel="stylesheet" href="./css/pagi-zamrud.css" />
 
-    <!-- Guest CSS (original template) -->
+    <!-- Original guest.css -->
     <link rel="stylesheet" href="./css/guest.css" />
+
+    <!-- Dependencies JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script defer src="./dist/guest.js"></script>
   </head>
 
   <body data-key="135e33e630106edccf611056a5f05322a4c79b78aaa548b71a" data-url="https://api-rifat.paha.my.id" data-audio="./assets/audio/Wedding Nasheed Muhammad Al Muqit.m4a" data-confetti="true" data-time="2026-02-01 09:00:00">
@@ -49,8 +75,8 @@
         <div class="position-relative bg-white-black d-flex justify-content-center align-items-center vh-100">
           <div class="d-flex position-absolute w-100 h-100">
             <div class="position-relative overflow-hidden vw-100">
+              <!-- gunakan hanya satu background desktop (bg-pagi-zamrud.jpg) -->
               <div class="position-absolute h-100 w-100 slide-desktop" style="opacity: 1">
-                <!-- fallback image (optional) -->
                 <img src="./assets/images/bg-pagi-zamrud.jpg" alt="bg" class="bg-cover-home" />
               </div>
             </div>
@@ -65,10 +91,11 @@
 
       <!-- Smartphone mode -->
       <div class="col-sm-7 col-md-6 col-lg-5 col-xl-4 col-xxl-3 m-0 p-0">
+        <!-- Main Content -->
         <main data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-root-margin="25% 0% 0% 0%" data-bs-smooth-scroll="true" tabindex="0">
           <!-- Home -->
           <section id="home" class="bg-light-dark position-relative overflow-hidden p-0 m-0">
-            <img src="./assets/images/logo.png" alt="logo" class="position-absolute opacity-10 top-50 start-50 translate-middle bg-cover-home" style="width:250px; height:250px; object-fit:contain; filter:grayscale(0) contrast(.95);"/>
+            <img src="./assets/images/logo.png" alt="logo watermark" class="position-absolute opacity-10 top-50 start-50 translate-middle bg-cover-home" style="width:250px; height:250px; object-fit:contain; filter:grayscale(0) contrast(.95);" />
 
             <div class="position-relative text-center bg-overlay-auto" style="background-color: unset">
               <h1 class="font-esthetic pt-5 pb-4 fw-medium" style="font-size: 2.25rem">Undangan Pernikahan</h1>
@@ -98,7 +125,11 @@
           <!-- Wave Separator -->
           <div class="svg-wrapper">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="color-theme-svg no-gap-bottom">
-              <path fill="currentColor" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,96C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+              <path
+                fill="currentColor"
+                fill-opacity="1"
+                d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,96C960,96,1056,160,1152,154.7C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
             </svg>
           </div>
 
@@ -111,7 +142,12 @@
             <div class="overflow-x-hidden pb-4">
               <div class="position-relative">
                 <div data-aos="fade-right" data-aos-duration="2000" class="pb-1">
-                  <img src="./assets/images/muslim.webp" alt="muslim" onclick="undangan.guest.modal(this)" class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer" />
+                  <img
+                    src="./assets/images/muslim.webp"
+                    alt="muslim"
+                    onclick="undangan.guest.modal(this)"
+                    class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer"
+                  />
                   <h2 class="font-esthetic m-0" style="font-size: 2.125rem">Muhammad Rifat</h2>
                   <h2 class="font-esthetic m-0" style="font-size: 2.125rem">bin</h2>
                   <h2 class="font-esthetic m-0" style="font-size: 2.125rem">Fahri</h2>
@@ -120,7 +156,12 @@
                 <h2 class="font-esthetic mt-4" style="font-size: 4.5rem">&amp;</h2>
 
                 <div data-aos="fade-left" data-aos-duration="2000" class="pb-1">
-                  <img src="./assets/images/muslimah.webp" alt="muslimah" onclick="undangan.guest.modal(this)" class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer" />
+                  <img
+                    src="./assets/images/muslimah.webp"
+                    alt="muslimah"
+                    onclick="undangan.guest.modal(this)"
+                    class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer"
+                  />
                   <h2 class="font-esthetic m-0" style="font-size: 2.125rem">Ulfa Eldina</h2>
                   <h2 class="font-esthetic m-0" style="font-size: 2.125rem">binti</h2>
                   <h2 class="font-esthetic m-0" style="font-size: 2.125rem">Elwadi</h2>
@@ -132,11 +173,15 @@
           <!-- Wave Separator -->
           <div class="svg-wrapper">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="color-theme-svg no-gap-bottom">
-              <path fill="currentColor" fill-opacity="1" d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,128C800,128,880,160,960,186.7C1040,213,1120,235,1200,218.7C1280,203,1360,149,1400,122.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+              <path
+                fill="currentColor"
+                fill-opacity="1"
+                d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,128C800,128,880,160,960,186.7C1040,213,1120,235,1200,218.7C1280,203,1360,149,1400,122.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+              ></path>
             </svg>
           </div>
 
-          <!-- Firman Allāh -->
+          <!-- Firman Allāh Subhānahu Wa Ta'ālā -->
           <section class="bg-light-dark pt-2 pb-4">
             <div class="container text-center">
               <h2 class="font-esthetic pt-2 pb-1 m-0" style="font-size: 2rem">Allāh Subhānahu Wa Ta'ālā berfirman</h2>
@@ -152,6 +197,17 @@
               </div>
             </div>
           </section>
+
+          <!-- Wave Separator -->
+          <div class="svg-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="color-theme-svg no-gap-bottom">
+              <path
+                fill="currentColor"
+                fill-opacity="1"
+                d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
 
           <!-- Wedding Date -->
           <section class="bg-white-black pb-2" id="wedding-date">
@@ -227,20 +283,54 @@
                 </div>
 
                 <div class="d-block mb-3" id="comment-form-default">
+                  <div id="information" class="alert alert-info alert-dismissible fade show rounded-4" role="alert">
+                    <button type="button" class="btn-close rounded-4 p-3" data-bs-dismiss="alert" aria-label="Close" onclick="undangan.guest.closeInformation()"></button>
+
+                    <p style="font-size: 1.5rem">Bestieee!!!</p>
+                    <p class="m-0">Cobain like seperti Instagram, dengan tap tap bagian komentarnya</p>
+                    <hr class="my-2" />
+                    <p class="m-0">Sama bisa format text seperti Whatsapp lohh... cobainn jugaaa, makaciwww bestieee</p>
+                  </div>
+
                   <label for="form-comment" class="form-label my-1"><i class="fa-solid fa-comment me-2"></i>Ucapan &amp; Doa</label>
                   <div class="position-relative">
+                    <button
+                      class="btn btn-secondary btn-sm rounded-4 shadow-sm me-1 my-1 position-absolute bottom-0 end-0"
+                      onclick="undangan.comment.gif.open(undangan.comment.gif.default)"
+                      aria-label="button gif"
+                      data-offline-disabled="false"
+                    >
+                      <i class="fa-solid fa-photo-film"></i>
+                    </button>
                     <textarea dir="auto" class="form-control shadow-sm rounded-4" id="form-comment" rows="4" minlength="1" maxlength="1000" placeholder="Tulis Ucapan dan Doa" autocomplete="off" data-offline-disabled="false"></textarea>
                   </div>
                 </div>
+
+                <div class="d-none mb-3" id="gif-form-default"></div>
 
                 <div class="d-grid">
                   <button class="btn btn-primary btn-sm rounded-4 shadow m-1" onclick="undangan.comment.send(this)" data-offline-disabled="false"><i class="fa-solid fa-paper-plane me-2"></i>Send</button>
                 </div>
               </div>
 
+              <!-- Comments -->
               <div class="py-3" id="comments" data-loading="false"></div>
+
+              <!-- Pagination -->
+              <nav class="d-flex d-none justify-content-center mt-1 mb-0" id="pagination"></nav>
             </div>
           </section>
+
+          <!-- Wave Separator -->
+          <div class="svg-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="color-theme-svg no-gap-bottom">
+              <path
+                fill="currentColor"
+                fill-opacity="1"
+                d="M0,224L34.3,234.7C68.6,245,137,267,206,266.7C274.3,267,343,245,411,234.7C480,224,549,224,617,213.3C685.7,203,754,181,823,197.3C891.4,213,960,267,1029,266.7C1097.1,267,1166,213,1234,192C1302.9,171,1371,181,1406,186.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
 
           <!-- End Of Invitation -->
           <section class="bg-white-black py-2 no-gap-bottom">
@@ -259,16 +349,28 @@
         <nav class="navbar navbar-expand sticky-bottom rounded-top-4 border-top p-0" id="navbar-menu">
           <ul class="navbar-nav nav-justified w-100 align-items-center">
             <li class="nav-item">
-              <a class="nav-link" href="#home"><i class="fa-solid fa-house" style="color:var(--primary)"></i><span class="d-block" style="font-size: 0.7rem; color:var(--text-muted)">Home</span></a>
+              <a class="nav-link" href="#home">
+                <i class="fa-solid fa-house" style="color:var(--primary)"></i>
+                <span class="d-block" style="font-size: 0.7rem; color:var(--text-muted)">Home</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#bride"><i class="fa-solid fa-user-group" style="color:var(--primary)"></i><span class="d-block" style="font-size: 0.7rem; color:var(--text-muted)">Mempelai</span></a>
+              <a class="nav-link" href="#bride">
+                <i class="fa-solid fa-user-group" style="color:var(--primary)"></i>
+                <span class="d-block" style="font-size: 0.7rem; color:var(--text-muted)">Mempelai</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#wedding-date"><i class="fa-solid fa-calendar-check" style="color:var(--primary)"></i><span class="d-block" style="font-size: 0.7rem; color:var(--text-muted)">Tanggal</span></a>
+              <a class="nav-link" href="#wedding-date">
+                <i class="fa-solid fa-calendar-check" style="color:var(--primary)"></i>
+                <span class="d-block" style="font-size: 0.7rem; color:var(--text-muted)">Tanggal</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#comment"><i class="fa-solid fa-comments" style="color:var(--primary)"></i><span class="d-block" style="font-size: 0.7rem; color:var(--text-muted)">Ucapan</span></a>
+              <a class="nav-link" href="#comment">
+                <i class="fa-solid fa-comments" style="color:var(--primary)"></i>
+                <span class="d-block" style="font-size: 0.7rem; color:var(--text-muted)">Ucapan</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -281,7 +383,7 @@
         <div class="d-flex flex-column text-center">
           <h2 class="font-esthetic mb-4" style="font-size: 2.25rem">The Wedding Of</h2>
 
-          <img src="./assets/images/logo.png" class="img-center-crop rounded-circle border border-3 border-light shadow mb-4 mx-auto" alt="logo" />
+          <img src="./assets/images/logo.png" class="img-center-crop rounded-circle border border-3 border-light shadow mb-4 mx-auto" alt="background" />
 
           <h2 class="font-esthetic mb-4" style="font-size: 2.25rem">Rifat &amp; Ulfa</h2>
           <div id="guest-name" data-message="Kepada Yth Bapak/Ibu/Saudara/i"></div>
@@ -291,11 +393,14 @@
       </div>
     </div>
 
-    <!-- Fixed buttons -->
+    <!-- Button Group -->
     <div class="d-flex position-fixed flex-column" style="bottom: 10vh; right: 2vh; z-index: 1030">
+      <!-- Theme Button -->
       <button type="button" id="button-theme" class="btn bg-light-dark border btn-sm rounded-circle d-none btn-transparent shadow-sm mt-3" aria-label="Change theme" onclick="undangan.theme.change()">
         <i class="fa-solid fa-circle-half-stroke"></i>
       </button>
+
+      <!-- Audio Button -->
       <button type="button" id="button-music" class="btn bg-light-dark border btn-sm rounded-circle d-none btn-transparent shadow-sm mt-3" aria-label="Change audio" data-offline-disabled="false">
         <i class="fa-solid fa-circle-pause spin-button"></i>
       </button>
@@ -310,7 +415,9 @@
             <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
           </div>
           <small class="d-none mt-1 text-theme-auto" id="progress-info" style="font-size: 0.8rem">Booting application...</small>
-          <noscript><small class="mt-1 text-danger">Sorry, this invitation requires javascript to work</small></noscript>
+          <noscript>
+            <small class="mt-1 text-danger">Sorry, this invitation requires javascript to work</small>
+          </noscript>
         </div>
       </div>
     </div>
@@ -337,9 +444,5 @@
         </div>
       </div>
     </div>
-
-    <!-- Scripts -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="./dist/guest.js"></script>
   </body>
 </html>
