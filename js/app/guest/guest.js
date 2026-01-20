@@ -245,26 +245,26 @@ export const guest = (() => {
     /**
      * @returns {void}
      */
-    const buildGoogleCalendar = () => {
-        /**
-         * @param {string} d 
-         * @returns {string}
-         */
-        const formatDate = (d) => (new Date(d.replace(' ', 'T') + ':00Z')).toISOString().replace(/[-:]/g, '').split('.').shift();
+    // const buildGoogleCalendar = () => {
+    //     /**
+    //      * @param {string} d 
+    //      * @returns {string}
+    //      */
+    //     const formatDate = (d) => (new Date(d.replace(' ', 'T') + ':00Z')).toISOString().replace(/[-:]/g, '').split('.').shift();
 
-        const url = new URL('https://calendar.app.google/BLb4mjuasJrdtcoJ6');
-        const data = new URLSearchParams({
-            action: 'TEMPLATE',
-            text: 'Pernikahan Rifat dan Ulfa',
-            dates: `${formatDate('2026-02-01 09:00')}/${formatDate('2026-02-01 09:00')}`,
-            details: 'Tanpa mengurangi rasa hormat, kami mengundang Anda untuk berkenan menghadiri acara pernikahan kami. Terima kasih atas perhatian dan doa Anda, yang menjadi kebahagiaan serta kehormatan besar bagi kami. Jazaakumullāhu khayran. Semoga Allāh balaskan kebaikan.',
-            location: 'Masjid At-Tiin Asem Baris, Kebon Baru, Tebet, South Jakarta City, Jakarta, Indonesia',
-            ctz: config.get('tz'),
-        });
+    //     const url = new URL('https://calendar.app.google/BLb4mjuasJrdtcoJ6');
+    //     const data = new URLSearchParams({
+    //         action: 'TEMPLATE',
+    //         text: 'Pernikahan Rifat dan Ulfa',
+    //         dates: `${formatDate('2026-02-01 09:00')}/${formatDate('2026-02-01 09:00')}`,
+    //         details: 'Tanpa mengurangi rasa hormat, kami mengundang Anda untuk berkenan menghadiri acara pernikahan kami. Terima kasih atas perhatian dan doa Anda, yang menjadi kebahagiaan serta kehormatan besar bagi kami. Jazaakumullāhu khayran. Semoga Allāh balaskan kebaikan.',
+    //         location: 'Masjid At-Tiin Asem Baris, Kebon Baru, Tebet, South Jakarta City, Jakarta, Indonesia',
+    //         ctz: config.get('tz'),
+    //     });
 
-        url.search = data.toString();
-        document.querySelector('#home button')?.addEventListener('click', () => window.open(url, '_blank'));
-    };
+    //     url.search = data.toString();
+    //     document.querySelector('#home button')?.addEventListener('click', () => window.open(url, '_blank'));
+    // };
 
     /**
      * @returns {object}
