@@ -70,6 +70,13 @@
     <script src="./dist/guest.js"></script>
   </head>
 
+  <!-- Hilangkan teks dibawah komentar -->
+  <style>
+  #comment #comments .text-center {
+      display: none !important;
+    }
+  </style>
+
   <body data-key="135e33e630106edccf611056a5f05322a4c79b78aaa548b71a" data-url="https://api-rifat.paha.my.id" data-audio="./assets/audio/Wedding Nasheed Muhammad Al Muqit.m4a" data-confetti="true" data-time="2026-02-01 09:00:00">
     <!-- Root Invitation -->
     <div class="row m-0 p-0 opacity-0" id="root">
@@ -472,7 +479,7 @@
           <div id="guest-name" data-message="Kepada Yth Bapak/Ibu/Saudara/i">
             <div class="m-2">
               <small class="mt-0 mb-1 mx-0 p-0">Kepada Yth Bapak/Ibu/Saudara/i</small>
-              <p id="guest-text" class="m-0 p-0" style="font-size: 1.25rem">Teman teman seiman</p>
+              <p id="guest-text" class="m-0 p-0" style="font-size: 1.25rem">yang kami sayangi karena Allāh</p>
             </div>
           </div>
           <button type="button" class="btn btn-light shadow rounded-4 mt-3 mx-auto" onclick="undangan.guest.open(this)"><i class="fa-solid fa-envelope-open fa-bounce me-2"></i>Open Invitation</button>
@@ -532,25 +539,63 @@
       </div>
     </div>
     <script>
-      // Ambil parameter query
+      // Ambil parameter query (URLSearchParams sudah decode otomatis)
       const params = new URLSearchParams(window.location.search);
       let nama = params.get('nama');
 
       // Fallback jika tidak ada atau kosong
       if (!nama || nama.trim() === '') {
-        nama = 'Teman teman seiman';
+        nama = 'yang kami sayangi karena Allāh';
       } else {
-        // Decode URL & ganti strip jadi spasi
-        nama = decodeURIComponent(nama.replace(/-/g, ' '));
+        // Ganti strip jadi spasi (optional for `muhammad-rifat` style)
+        // Ganti plus jadi spasi jika ada (beberapa generator pakai + untuk spasi)
+        nama = nama.replace(/-/g, ' ').replace(/\+/g, ' ').trim();
 
-        // Lowercase semua dulu
+        // Normalisasi: lowercase semua dulu (biar konsisten)
         nama = nama.toLowerCase();
 
-        // Kapital hanya di awal string atau setelah spasi
-        // (tidak setelah tanda kutip jika masih satu kata)
-        nama = nama.replace(/(^|\s)[a-z]/g, c => c.toUpperCase());
+        // Fungsi kapitalisasi per-kata dengan aturan apostrof
+        const APOSTROPHES = ["'", "’"]; // include straight + typographic apostrophe
+
+        function capitalizeWord(w) {
+          if (!w) return w;
+
+          // Pecah jadi array (Array.from aman untuk sebagian besar Unicode)
+          const chars = Array.from(w).map(c => c.toLowerCase());
+
+          // Jika kata dimulai dengan apostrof -> kapital huruf setelahnya
+          if (APOSTROPHES.includes(chars[0])) {
+            // tetap simpan apostrof di awal
+            if (chars.length > 1) {
+              chars[1] = chars[1].toUpperCase();
+            }
+            // sisanya tetap lowercase (sudah di-lowercase di atas)
+            return chars.join('');
+          }
+
+          // Jika bukan dimulai apostrof:
+          // 1) kapital huruf pertama kata
+          chars[0] = chars[0].toUpperCase();
+
+          // 2) Untuk setiap apostrof di tengah kata, pastikan huruf setelahnya lowercase
+          for (let i = 0; i < chars.length; i++) {
+            if (APOSTROPHES.includes(chars[i]) && i + 1 < chars.length) {
+              // huruf setelah apostrof di tengah kata -> lowercase
+              chars[i + 1] = chars[i + 1].toLowerCase();
+            }
+          }
+
+          return chars.join('');
+        }
+
+        // Terapkan ke tiap kata (split by whitespace)
+        nama = nama
+          .split(/\s+/)
+          .map(capitalizeWord)
+          .join(' ');
       }
 
+      // Tampilkan hasil (textContent aman dari XSS)
       document.getElementById('guest-text').textContent = nama;
     </script>
   </body>
